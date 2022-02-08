@@ -1,23 +1,25 @@
 // @ts-check
 
 import { readFileSync } from 'fs'
-import { join } from 'path'
+import path,{ join } from 'path'
 
 import { Canvas, GlobalFonts, Path2D, Image } from '@napi-rs/canvas'
+const dirRelativeToPublicFolder = 'fonts'
 
-GlobalFonts.registerFromPath(join(__dirname, 'assets', 'Iosevka-Bold.ttf'))
+const dir = path.resolve('./public', dirRelativeToPublicFolder);
+GlobalFonts.registerFromPath(join(dirRelativeToPublicFolder,'Iosevka-Bold.ttf'))
 GlobalFonts.registerFromPath(
   join(__dirname, 'assets', 'Iosevka-Extralight.ttf')
 )
-GlobalFonts.registerFromPath(join(__dirname, 'assets', 'Iosevka-Heavy.ttf'))
-GlobalFonts.registerFromPath(join(__dirname, 'assets', 'Iosevka-Light.ttf'))
-GlobalFonts.registerFromPath(join(__dirname, 'assets', 'Iosevka-Medium.ttf'))
-GlobalFonts.registerFromPath(join(__dirname, 'assets', 'Iosevka.ttf'))
-GlobalFonts.registerFromPath(join(__dirname, 'assets', 'Iosevka-Thin.ttf'))
+GlobalFonts.registerFromPath(join(dirRelativeToPublicFolder,'Iosevka-Heavy.ttf'))
+GlobalFonts.registerFromPath(join(dirRelativeToPublicFolder,'Iosevka-Light.ttf'))
+GlobalFonts.registerFromPath(join(dirRelativeToPublicFolder,'Iosevka-Medium.ttf'))
+GlobalFonts.registerFromPath(join(dirRelativeToPublicFolder,'Iosevka.ttf'))
+GlobalFonts.registerFromPath(join(dirRelativeToPublicFolder,'Iosevka-Thin.ttf'))
 
-//const NAPI_RS = readFileSync(join(__dirname, 'assets', 'napi-rs.svg'))
+const NAPI_RS = readFileSync(join("./public",'images', 'napi-rs.svg'))
 const NAPI_RS_IMAGE = new Image()
-// NAPI_RS_IMAGE.src = NAPI_RS
+NAPI_RS_IMAGE.src = NAPI_RS
 NAPI_RS_IMAGE.width = 320
 NAPI_RS_IMAGE.height = 320
 
