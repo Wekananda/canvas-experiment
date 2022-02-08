@@ -51,8 +51,9 @@ export default async function generateImage(req, res) {
   ctx.fillRect(0, 0, 600, HEIGHT)
   ctx.fillStyle = 'black'
   ctx.fillRect(600, 0, WIDTH - 600, HEIGHT)
-  const size = 42;
-  ctx.font = `bold ${size}pt "OpenSans"`;
+  const size = 48;
+  ctx.font = 'bold '+size+'px "Open Sans"';
+  //'bold 48px "Open Sans"';
   ctx.fillStyle = 'white'
   ctx.fillText('Coba Open Sans', 40, 550)
   ctx.fillText('answered', 40, 625)
