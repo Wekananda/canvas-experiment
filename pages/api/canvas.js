@@ -16,7 +16,7 @@ GlobalFonts.registerFromPath(join(dir,'Iosevka-Light.ttf'))
 GlobalFonts.registerFromPath(join(dir,'Iosevka-Medium.ttf'))
 GlobalFonts.registerFromPath(join(dir,'Iosevka.ttf'))
 GlobalFonts.registerFromPath(join(dir,'Iosevka-Thin.ttf'))
-GlobalFonts.registerFromPath(join(dir, "OpenSans-Bold.ttf"));
+GlobalFonts.registerFromPath(join(dir, 'OpenSans-Bold.ttf'));
 const NAPI_RS = readFileSync(join(dir, 'napi-rs.svg'))
 const NAPI_RS2 = readFileSync(join(dir,'Iosevka-Heavy.ttf'))
 const NAPI_RS_IMAGE = new Image()
@@ -51,7 +51,7 @@ export default async function generateImage(req, res) {
   ctx.fillRect(0, 0, 600, HEIGHT)
   ctx.fillStyle = 'black'
   ctx.fillRect(600, 0, WIDTH - 600, HEIGHT)
-  ctx.font = `bold 18pt OpenSans`
+  ctx.font = 'bold 48px "Open Sans"';
   ctx.fillStyle = 'white'
   ctx.fillText('Coba Open Sans', 40, 550)
   ctx.fillText('answered', 40, 625)
