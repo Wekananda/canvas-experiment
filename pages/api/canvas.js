@@ -15,9 +15,9 @@ GlobalFonts.registerFromPath(join(__dirname, 'assets', 'Iosevka-Medium.ttf'))
 GlobalFonts.registerFromPath(join(__dirname, 'assets', 'Iosevka.ttf'))
 GlobalFonts.registerFromPath(join(__dirname, 'assets', 'Iosevka-Thin.ttf'))
 
-const NAPI_RS = readFileSync(join(__dirname, 'assets', 'napi-rs.svg'))
+//const NAPI_RS = readFileSync(join(__dirname, 'assets', 'napi-rs.svg'))
 const NAPI_RS_IMAGE = new Image()
-NAPI_RS_IMAGE.src = NAPI_RS
+// NAPI_RS_IMAGE.src = NAPI_RS
 NAPI_RS_IMAGE.width = 320
 NAPI_RS_IMAGE.height = 320
 
