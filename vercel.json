@@ -12,7 +12,7 @@
   ],
   "functions": {
     "pages/api/canvas.js": {
-      "includeFiles": "pages/api/assets/**"
+      "includeFiles": "public/**"
     }
   }
 }
