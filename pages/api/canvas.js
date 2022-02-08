@@ -6,7 +6,7 @@ import path,{ join } from 'path'
 import { Canvas, GlobalFonts, Path2D, Image } from '@napi-rs/canvas'
 const dirRelativeToPublicFolder = 'fonts'
 
-const dir = path.resolve('./public', dirRelativeToPublicFolder);
+const dir = path.resolve('.', 'public/assets-api');
 GlobalFonts.registerFromPath(join(dir,'Iosevka-Bold.ttf'))
 GlobalFonts.registerFromPath(
     join(dir, 'Iosevka-Extralight.ttf')
@@ -17,7 +17,7 @@ GlobalFonts.registerFromPath(join(dir,'Iosevka-Medium.ttf'))
 GlobalFonts.registerFromPath(join(dir,'Iosevka.ttf'))
 GlobalFonts.registerFromPath(join(dir,'Iosevka-Thin.ttf'))
 
-const NAPI_RS = readFileSync(join("./public",'images', 'napi-rs.svg'))
+const NAPI_RS = readFileSync(join(dir, 'napi-rs.svg'))
 const NAPI_RS2 = readFileSync(join(dir,'Iosevka-Heavy.ttf'))
 const NAPI_RS_IMAGE = new Image()
 NAPI_RS_IMAGE.src = NAPI_RS
